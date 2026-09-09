@@ -22,6 +22,7 @@ export function CursorSpider() {
     let vx = 0;
     let vy = 0;
     let raf = 0;
+    let running = true;
     let idle: ReturnType<typeof setTimeout>;
 
     const onMove = (e: MouseEvent) => {
