@@ -30,6 +30,11 @@ export function CursorSpider() {
       setWalking(true);
       clearTimeout(idle);
       idle = setTimeout(() => setWalking(false), 180);
+      // wake the animation loop back up if it settled
+      if (!running) {
+        running = true;
+        raf = requestAnimationFrame(tick);
+      }
     };
 
     const tick = () => {
@@ -38,12 +43,18 @@ export function CursorSpider() {
       vy = (vy + (target.y - pos.y) * 0.06) * 0.82;
       pos.x += vx;
       pos.y += vy;
+      const speed = Math.hypot(vx, vy);
       const angle = Math.atan2(vy, vx) * (180 / Math.PI);
       const el = ref.current;
       if (el) {
         el.style.transform = `translate3d(${pos.x - 14}px, ${pos.y - 14}px, 0) rotate(${
-          Math.hypot(vx, vy) > 0.4 ? angle + 90 : 0
+          speed > 0.4 ? angle + 90 : 0
         }deg)`;
+      }
+      // stop burning frames once the spider has caught up and stopped moving
+      if (speed < 0.05 && Math.hypot(target.x - pos.x, target.y - pos.y) < 0.5) {
+        running = false;
+        return;
       }
       raf = requestAnimationFrame(tick);
     };

@@ -13,8 +13,10 @@ export function Reveal({
   const [shown, setShown] = useState(false);
 
   useEffect(() => {
+    setShown(false);
     const el = ref.current;
     if (!el) return;
+
     const io = new IntersectionObserver(
       (entries) => {
         if (entries[0]?.isIntersecting) {
@@ -25,7 +27,18 @@ export function Reveal({
       { threshold: 0.12, rootMargin: "0px 0px -60px 0px" },
     );
     io.observe(el);
-    return () => io.disconnect();
+
+    // Safety net: if the observer never fires (route-change timing, hydration,
+    // element already visible), force the content visible.
+    const fallback = setTimeout(() => {
+      setShown(true);
+      io.disconnect();
+    }, 500);
+
+    return () => {
+      io.disconnect();
+      clearTimeout(fallback);
+    };
   }, []);
 
   return (
