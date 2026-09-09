@@ -1,4 +1,5 @@
 import { createFileRoute, Link, notFound } from "@tanstack/react-router";
+import { RouteSkeleton } from "@/components/RouteSkeleton";
 import { ArrowLeft, ArrowRight, Check } from "lucide-react";
 import { PageHeader } from "@/components/PageHeader";
 import { Reveal } from "@/components/Reveal";
@@ -20,6 +21,7 @@ export const Route = createFileRoute("/products/$slug")({
         ]
       : [],
   }),
+  pendingComponent: RouteSkeleton,
   component: ProductDetail,
 });
 

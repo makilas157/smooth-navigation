@@ -1,4 +1,5 @@
 import { createFileRoute, Link, notFound } from "@tanstack/react-router";
+import { RouteSkeleton } from "@/components/RouteSkeleton";
 import { ArrowLeft } from "lucide-react";
 import { PageHeader } from "@/components/PageHeader";
 import { Reveal } from "@/components/Reveal";
@@ -21,6 +22,7 @@ export const Route = createFileRoute("/blogs/$slug")({
         ]
       : [],
   }),
+  pendingComponent: RouteSkeleton,
   component: PostPage,
 });
 
