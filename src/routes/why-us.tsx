@@ -31,8 +31,7 @@ const values = [
     body: "The people in the kickoff are the people writing the code. No hand-off to juniors after the pitch.",
   },
   {
-    icon: Gauge
-    ,
+    icon: Gauge,
     title: "Transparent delivery",
     body: "Weekly demos, a visible backlog and honest estimates you can plan a business around.",
   },
@@ -59,10 +58,26 @@ const values = [
 ];
 
 const process = [
-  { step: "01", title: "Frame", body: "Workshops to define the outcome, constraints and success metric." },
-  { step: "02", title: "Shape", body: "Prototypes and architecture spikes that de-risk the hard parts early." },
-  { step: "03", title: "Build", body: "Two-week cycles with working software at the end of each one." },
-  { step: "04", title: "Scale", body: "Hardening, handover and a support rhythm that fits your team." },
+  {
+    step: "01",
+    title: "Frame",
+    body: "Workshops to define the outcome, constraints and success metric.",
+  },
+  {
+    step: "02",
+    title: "Shape",
+    body: "Prototypes and architecture spikes that de-risk the hard parts early.",
+  },
+  {
+    step: "03",
+    title: "Build",
+    body: "Two-week cycles with working software at the end of each one.",
+  },
+  {
+    step: "04",
+    title: "Scale",
+    body: "Hardening, handover and a support rhythm that fits your team.",
+  },
 ];
 
 function WhyUsPage() {

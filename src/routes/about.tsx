@@ -25,17 +25,38 @@ export const Route = createFileRoute("/about")({
 });
 
 const timeline = [
-  { year: "2020", body: "Two engineers, one contract and a rented desk. First client platform shipped in eleven weeks." },
-  { year: "2021", body: "Design joined the team. We stopped taking briefs we couldn't shape ourselves." },
-  { year: "2023", body: "FlowDesk launched as an internal tool, then became our first commercial product." },
-  { year: "2024", body: "Cloud and data practice formed to support platforms that had outgrown their infrastructure." },
-  { year: "2026", body: "Thirty products shipped, forty clients, and the same rule: senior people, start to finish." },
+  {
+    year: "2020",
+    body: "Two engineers, one contract and a rented desk. First client platform shipped in eleven weeks.",
+  },
+  {
+    year: "2021",
+    body: "Design joined the team. We stopped taking briefs we couldn't shape ourselves.",
+  },
+  {
+    year: "2023",
+    body: "FlowDesk launched as an internal tool, then became our first commercial product.",
+  },
+  {
+    year: "2024",
+    body: "Cloud and data practice formed to support platforms that had outgrown their infrastructure.",
+  },
+  {
+    year: "2026",
+    body: "Thirty products shipped, forty clients, and the same rule: senior people, start to finish.",
+  },
 ];
 
 const values = [
   { title: "Craft over volume", body: "We take fewer projects so each one gets real attention." },
-  { title: "Plain language", body: "No jargon shields. If we can't explain a decision, we reconsider it." },
-  { title: "Own the outcome", body: "We measure ourselves on what the software changed, not hours logged." },
+  {
+    title: "Plain language",
+    body: "No jargon shields. If we can't explain a decision, we reconsider it.",
+  },
+  {
+    title: "Own the outcome",
+    body: "We measure ourselves on what the software changed, not hours logged.",
+  },
 ];
 
 function AboutPage() {

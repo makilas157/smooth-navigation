@@ -34,8 +34,7 @@ export const services: CatalogItem[] = [
   {
     slug: "mobile-applications",
     title: "Mobile Applications",
-    description:
-      "Thoughtful iOS and Android experiences from prototype through store launch.",
+    description: "Thoughtful iOS and Android experiences from prototype through store launch.",
     image: cardMobile,
     detail:
       "From first prototype to store release, we ship mobile products that feel native, handle real-world networks and keep shipping after launch.",
@@ -82,8 +81,7 @@ export const products: CatalogItem[] = [
   {
     slug: "flowdesk",
     title: "FlowDesk",
-    description:
-      "A clear, lightweight project and task workspace for focused engineering teams.",
+    description: "A clear, lightweight project and task workspace for focused engineering teams.",
     image: cardPlatform,
     detail:
       "FlowDesk keeps planning close to the work: one board, one backlog, no ceremony. Built for teams who want visibility without process overhead.",
@@ -97,8 +95,7 @@ export const products: CatalogItem[] = [
   {
     slug: "pulseboard",
     title: "Pulseboard",
-    description:
-      "Live business dashboards that bring essential signals into one dependable view.",
+    description: "Live business dashboards that bring essential signals into one dependable view.",
     image: cardData,
     detail:
       "Pulseboard connects your sources and shows the handful of numbers that actually drive decisions — refreshed live, shareable with anyone.",
@@ -127,8 +124,7 @@ export const products: CatalogItem[] = [
   {
     slug: "custom-platforms",
     title: "Custom Platforms",
-    description:
-      "Domain-specific systems built with the same product rigor as our own tools.",
+    description: "Domain-specific systems built with the same product rigor as our own tools.",
     image: cardWeb,
     detail:
       "When off-the-shelf software fights your business, we build the system around your domain — and treat it like a product, not a project.",
