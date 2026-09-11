@@ -5,12 +5,15 @@ import type { CatalogItem } from "@/data/site";
 export function CatalogCard({
   item,
   to,
+  index = 0,
 }: {
   item: CatalogItem;
   to: "/services/$slug" | "/products/$slug";
+  index?: number;
 }) {
   return (
-    <Link to={to} params={{ slug: item.slug }} className="catalog-card group">
+    <div className="float-soft h-full" style={{ animationDelay: `${(index % 4) * 0.45}s` }}>
+    <Link to={to} params={{ slug: item.slug }} className="catalog-card group glow-hover block h-full">
       <div className="relative aspect-[4/3] overflow-hidden">
         <img
           src={item.image}
