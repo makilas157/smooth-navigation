@@ -39,7 +39,7 @@ function ProductsPage() {
         <div className="container-x grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
           {products.map((p, i) => (
             <Reveal key={p.slug} delay={i * 70}>
-              <CatalogCard item={p} to="/products/$slug" />
+              <CatalogCard item={p} to="/products/$slug" index={i} />
             </Reveal>
           ))}
         </div>
