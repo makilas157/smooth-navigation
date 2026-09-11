@@ -78,7 +78,7 @@ function Home() {
                 <div
                   key={s.label}
                   className="glass-panel float-soft glow-hover px-5 py-4"
-                  style={{ animationDelay: `${i * 0.5}s` }}
+                  style={{ animationDelay: `${i * 0.35}s` }}
                 >
                   <dt className="font-display text-2xl font-semibold text-primary">{s.value}</dt>
                   <dd className="mt-1 text-xs tracking-wide text-muted-foreground uppercase">
