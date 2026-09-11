@@ -33,5 +33,6 @@ export function CatalogCard({
         <p className="mt-3 text-sm leading-relaxed text-muted-foreground">{item.description}</p>
       </div>
     </Link>
+    </div>
   );
 }
