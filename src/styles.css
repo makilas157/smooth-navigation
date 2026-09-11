@@ -396,10 +396,42 @@
   }
 }
 
+@keyframes tvx-heading-glow {
+  0%,
+  100% {
+    opacity: 0.35;
+    transform: translate3d(0, 0, 0) scale(1);
+  }
+  50% {
+    opacity: 0.65;
+    transform: translate3d(0, -8px, 0) scale(1.08);
+  }
+}
+
+@utility heading-glow {
+  position: absolute;
+  pointer-events: none;
+  border-radius: 9999px;
+  filter: blur(80px);
+  background: radial-gradient(
+    circle,
+    oklch(0.68 0.19 40 / 0.55) 0%,
+    oklch(0.68 0.19 40 / 0.18) 45%,
+    transparent 70%
+  );
+  animation: tvx-heading-glow 6s ease-in-out infinite;
+
+  @media (max-width: 640px) {
+    filter: blur(52px);
+    opacity: 0.3;
+  }
+}
+
 @media (prefers-reduced-motion: reduce) {
   .float-soft,
   .glow-pulse,
-  .light-orb {
+  .light-orb,
+  .heading-glow {
     animation: none !important;
   }
 }

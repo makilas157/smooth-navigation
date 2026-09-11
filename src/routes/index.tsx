@@ -37,7 +37,7 @@ function Home() {
           alt="Abstract luminous technology waves"
           width={1920}
           height={1088}
-          className="absolute inset-0 h-full w-full object-cover"
+          className="float-soft absolute inset-0 h-full w-full scale-110 object-cover"
         />
         <div className="absolute inset-0 bg-gradient-to-b from-background/90 via-background/75 to-background" />
         <CursorGrid />
@@ -46,9 +46,15 @@ function Home() {
             <SectionTag>Next-gen tech studio</SectionTag>
           </Reveal>
           <Reveal delay={90}>
-            <h1 className="mt-6 max-w-4xl text-4xl leading-[1.03] font-semibold sm:text-6xl lg:text-7xl">
-              We build the tech <span className="text-gradient">your business runs on.</span>
-            </h1>
+            <div className="relative">
+              <span
+                aria-hidden="true"
+                className="heading-glow -top-16 -left-10 h-64 w-[32rem] max-w-full"
+              />
+              <h1 className="relative mt-6 max-w-4xl text-4xl leading-[1.03] font-semibold sm:text-6xl lg:text-7xl">
+                We build the tech <span className="text-gradient">your business runs on.</span>
+              </h1>
+            </div>
           </Reveal>
           <Reveal delay={180}>
             <p className="accent-rule mt-8 max-w-xl text-base leading-relaxed text-muted-foreground sm:text-lg">
@@ -72,7 +78,7 @@ function Home() {
                 <div
                   key={s.label}
                   className="glass-panel float-soft glow-hover px-5 py-4"
-                  style={{ animationDelay: `${i * 0.5}s` }}
+                  style={{ animationDelay: `${i * 0.35}s` }}
                 >
                   <dt className="font-display text-2xl font-semibold text-primary">{s.value}</dt>
                   <dd className="mt-1 text-xs tracking-wide text-muted-foreground uppercase">
