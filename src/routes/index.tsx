@@ -37,7 +37,7 @@ function Home() {
           alt="Abstract luminous technology waves"
           width={1920}
           height={1088}
-          className="absolute inset-0 h-full w-full object-cover"
+          className="float-soft absolute inset-0 h-full w-full scale-110 object-cover"
         />
         <div className="absolute inset-0 bg-gradient-to-b from-background/90 via-background/75 to-background" />
         <CursorGrid />
