@@ -68,8 +68,12 @@ function Home() {
           </Reveal>
           <Reveal delay={340}>
             <dl className="mt-16 grid max-w-3xl grid-cols-2 gap-6 sm:grid-cols-4">
-              {stats.map((s) => (
-                <div key={s.label} className="glass-panel px-5 py-4">
+              {stats.map((s, i) => (
+                <div
+                  key={s.label}
+                  className="glass-panel float-soft glow-hover px-5 py-4"
+                  style={{ animationDelay: `${i * 0.5}s` }}
+                >
                   <dt className="font-display text-2xl font-semibold text-primary">{s.value}</dt>
                   <dd className="mt-1 text-xs tracking-wide text-muted-foreground uppercase">
                     {s.label}
@@ -97,7 +101,7 @@ function Home() {
           <div className="mt-12 grid gap-6 md:grid-cols-3">
             {services.slice(0, 3).map((s, i) => (
               <Reveal key={s.slug} delay={i * 80}>
-                <CatalogCard item={s} to="/services/$slug" />
+                <CatalogCard item={s} to="/services/$slug" index={i} />
               </Reveal>
             ))}
           </div>
@@ -127,7 +131,7 @@ function Home() {
           <div className="mt-12 grid gap-6 md:grid-cols-3">
             {products.slice(0, 3).map((p, i) => (
               <Reveal key={p.slug} delay={i * 80}>
-                <CatalogCard item={p} to="/products/$slug" />
+                <CatalogCard item={p} to="/products/$slug" index={i} />
               </Reveal>
             ))}
           </div>

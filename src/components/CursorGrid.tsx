@@ -41,10 +41,18 @@ export function CursorGrid({ className = "" }: { className?: string }) {
         }}
       />
       <div
+        className="light-orb -top-24 left-[8%] h-72 w-72"
+        style={{ background: "oklch(0.72 0.16 70 / 0.55)" }}
+      />
+      <div
+        className="light-orb top-1/3 right-[6%] h-96 w-96"
+        style={{ background: "oklch(0.68 0.19 40 / 0.45)", animationDelay: "-7s" }}
+      />
+      <div
         className="absolute inset-0"
         style={{
           background:
-            "radial-gradient(320px circle at var(--mx) var(--my), oklch(0.68 0.19 40 / 0.1), transparent 70%)",
+            "radial-gradient(340px circle at var(--mx) var(--my), oklch(0.68 0.19 40 / 0.14), transparent 70%)",
         }}
       />
     </div>
