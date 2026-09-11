@@ -46,9 +46,15 @@ function Home() {
             <SectionTag>Next-gen tech studio</SectionTag>
           </Reveal>
           <Reveal delay={90}>
-            <h1 className="mt-6 max-w-4xl text-4xl leading-[1.03] font-semibold sm:text-6xl lg:text-7xl">
-              We build the tech <span className="text-gradient">your business runs on.</span>
-            </h1>
+            <div className="relative">
+              <span
+                aria-hidden="true"
+                className="heading-glow -top-16 -left-10 h-64 w-[32rem] max-w-full"
+              />
+              <h1 className="relative mt-6 max-w-4xl text-4xl leading-[1.03] font-semibold sm:text-6xl lg:text-7xl">
+                We build the tech <span className="text-gradient">your business runs on.</span>
+              </h1>
+            </div>
           </Reveal>
           <Reveal delay={180}>
             <p className="accent-rule mt-8 max-w-xl text-base leading-relaxed text-muted-foreground sm:text-lg">
