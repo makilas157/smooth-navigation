@@ -2,6 +2,7 @@ import { createFileRoute, Link } from "@tanstack/react-router";
 import { ArrowRight } from "lucide-react";
 import heroImage from "@/assets/hero.jpg";
 import { CursorGrid } from "@/components/CursorGrid";
+import { HeroScene } from "@/components/HeroScene";
 import { CatalogCard } from "@/components/CatalogCard";
 import { Reveal } from "@/components/Reveal";
 import { SectionHeading, SectionTag } from "@/components/SectionHeading";
